@@ -1,4 +1,4 @@
-package study.springsecurity.Jwt.Dto;
+package study.springsecurity.Domain.User.Jwt;
 
 public record JwtDto(
         String accessToken,

@@ -1,4 +1,4 @@
-package study.springsecurity.User.Entiry;
+package study.springsecurity.Domain.User.Entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
