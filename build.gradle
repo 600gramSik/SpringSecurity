@@ -33,6 +33,28 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Jwt
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.12.3'
+    implementation 'io.jsonwebtoken:jjwt-jackson:0.12.3'
+
+    // Security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Redis
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '3.2.0'
+    implementation 'org.springframework.session:spring-session-data-redis:3.1.1'
+
+    // Slf4j
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+
+    implementation 'com.google.guava:guava:33.0.0-jre'
+
+    implementation 'com.google.code.gson:gson'
+
+    //validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 
 tasks.named('test') {

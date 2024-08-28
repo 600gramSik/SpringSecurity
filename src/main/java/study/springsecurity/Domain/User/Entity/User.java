@@ -1,24 +1,21 @@
-package study.springsecurity.User.Entiry;
+package study.springsecurity.Domain.User.Entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Builder
-@Table(name = "account_user")
+@Getter
+@Table(name = "user")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "email", nullable = false, length = 20)
+    @Column(name = "email", nullable = false, length = 50)
     private String email;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
