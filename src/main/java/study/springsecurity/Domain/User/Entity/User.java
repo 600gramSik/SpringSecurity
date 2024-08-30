@@ -3,6 +3,7 @@ package study.springsecurity.Domain.User.Entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
+import study.springsecurity.Global.Common.BaseEntity;
 
 @Entity
 @Builder
@@ -10,7 +11,7 @@ import lombok.*;
 @Table(name = "user")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class User {
+public class User extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
